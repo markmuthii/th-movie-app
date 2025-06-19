@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Custom scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #9333ea; /* Purple-600 color */
+        border-radius: 999px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #7e22ce; /* Purple-700 color */
+      }
+
+      /* For Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #9333ea transparent;
+      }
+    </style>
+  </head>
+  <body class="">
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 bg-black/90 backdrop-blur-sm z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <h1
+          class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+        >
+          Moovee
+        </h1>
+        <div class="relative w-full max-w-xl mx-4">
+          <input
+            type="search"
+            placeholder="Search movies & shows..."
+            class="w-full px-4 py-2 rounded-full bg-gray-800 text-white focus:ring-2 focus:ring-purple-600 focus:outline-none"
+          />
+          <button class="absolute right-3 top-1/2 -translate-y-1/2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[85vh] mt-16">
+      <div
+        class="absolute inset-0 bg-[url('https://source.unsplash.com/random/1920x1080/?movie')] bg-cover bg-center"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"
+        ></div>
+      </div>
+      <div class="relative container mx-auto px-4 h-full flex items-end pb-16">
+        <div class="text-white max-w-2xl">
+          <h2 class="text-5xl font-bold mb-4">Featured Title</h2>
+          <p class="text-lg mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button
+            class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-full font-semibold flex items-center gap-2"
+          >
+            Watch Now
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Movie Sections -->
+    <main class="bg-black text-white pb-16">
+      <!-- Trending Section -->
+      <section class="py-8">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl font-bold mb-6">Trending Now</h2>
+          <div class="relative">
+            <div
+              class="absolute left-0 top-0 bottom-4 w-16 bg-gradient-to-r from-black to-transparent z-10"
+            ></div>
+            <div
+              class="absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-black to-transparent z-10"
+            ></div>
+            <div
+              class="flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-hide px-16"
+            >
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+            </div>
+            <button
+              class="scroll-left absolute left-0 top-1/2 -translate-y-1/2 bg-purple-600 hover:bg-purple-700 p-3 rounded-full shadow-lg z-20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              class="scroll-right absolute right-0 top-1/2 -translate-y-1/2 bg-purple-600 hover:bg-purple-700 p-3 rounded-full shadow-lg z-20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Section -->
+      <section class="py-8">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl font-bold mb-6">Popular</h2>
+          <div class="relative">
+            <div
+              class="absolute left-0 top-0 bottom-4 w-16 bg-gradient-to-r from-black to-transparent z-10"
+            ></div>
+            <div
+              class="absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-black to-transparent z-10"
+            ></div>
+            <div
+              class="flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-hide px-16"
+            >
+              <!-- (Previous movie items remain unchanged) -->
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+              <!-- (Repeat for all movie items) -->
+            </div>
+            <button
+              class="scroll-left absolute left-0 top-1/2 -translate-y-1/2 bg-purple-600 hover:bg-purple-700 p-3 rounded-full shadow-lg z-20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              class="scroll-right absolute right-0 top-1/2 -translate-y-1/2 bg-purple-600 hover:bg-purple-700 p-3 rounded-full shadow-lg z-20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Releases -->
+      <section class="py-8">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl font-bold mb-6">Recent Releases</h2>
+          <div class="relative">
+            <div
+              class="absolute left-0 top-0 bottom-4 w-16 bg-gradient-to-r from-black to-transparent z-10"
+            ></div>
+            <div
+              class="absolute right-0 top-0 bottom-4 w-16 bg-gradient-to-l from-black to-transparent z-10"
+            ></div>
+            <div
+              class="flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-hide px-16"
+            >
+              <!-- (Previous movie items remain unchanged) -->
+              <div class="snap-start flex-none w-36 sm:w-48">
+                <div
+                  class="relative aspect-[2/3] rounded-lg overflow-hidden mb-2"
+                >
+                  <img
+                    src="https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg"
+                    alt="Movie poster"
+                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="font-semibold truncate">Movie Title</h3>
+                <p class="text-sm text-gray-400">2023</p>
+              </div>
+              <!-- (Repeat for all movie items) -->
+            </div>
+            <button
+              class="scroll-left absolute left-0 top-1/2 -translate-y-1/2 bg-purple-600 hover:bg-purple-700 p-3 rounded-full shadow-lg z-20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              class="scroll-right absolute right-0 top-1/2 -translate-y-1/2 bg-purple-600 hover:bg-purple-700 p-3 rounded-full shadow-lg z-20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const scrollLeftButtons = document.querySelectorAll(".scroll-left");
+        const scrollRightButtons = document.querySelectorAll(".scroll-right");
+
+        scrollLeftButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const section = button.closest("section");
+            const container = section.querySelector(".overflow-x-auto");
+            const scrollAmount = -container.clientWidth; // Negative for left scroll
+
+            container.scrollBy({
+              left: scrollAmount,
+              behavior: "smooth",
+            });
+          });
+        });
+
+        scrollRightButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const section = button.closest("section");
+            const container = section.querySelector(".overflow-x-auto");
+            const scrollAmount = container.clientWidth;
+
+            container.scrollBy({
+              left: scrollAmount,
+              behavior: "smooth",
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
