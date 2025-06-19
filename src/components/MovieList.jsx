@@ -1,3 +1,5 @@
+import moviesArray from "../data/movies.json";
+
 const MovieList = () => {
   // Fetch all our movies
 
