@@ -6,6 +6,7 @@ import { AccountLayout } from "./pages/AccountLayout";
 import { Dashboard } from "./pages/Dashboard";
 import { Profile } from "./pages/Profile";
 import { State } from "./pages/State";
+import { Login } from "./pages/Login";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         </Route>
 
         <Route path="/state" element={<State />} />
+        <Route path="/login" element={<Login />} />
 
         <Route path="account" element={<AccountLayout />}>
           <Route index element={<Dashboard />} />
