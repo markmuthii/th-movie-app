@@ -1,4 +1,7 @@
-const Hero = () => {
+const Hero = ({
+  title = "This is the default title",
+  overview = "This is the default overview",
+}) => {
   return (
     <section className="relative h-[85vh] mt-16">
       <div className="absolute inset-0 bg-[url('https://source.unsplash.com/random/1920x1080/?movie')] bg-cover bg-center">
@@ -6,11 +9,8 @@ const Hero = () => {
       </div>
       <div className="relative container mx-auto px-4 h-full flex items-end pb-16">
         <div className="text-white max-w-2xl">
-          <h2 className="text-5xl font-bold mb-4">Featured Title</h2>
-          <p className="text-lg mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          <h2 className="text-5xl font-bold mb-4">{title}</h2>
+          <p className="text-lg mb-6">{overview}</p>
           <button className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-full font-semibold flex items-center gap-2">
             Watch Now
             <svg
