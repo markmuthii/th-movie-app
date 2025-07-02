@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const State = () => {
   // Normal variable
@@ -23,6 +23,10 @@ const State = () => {
 
     console.log(counter);
   };
+
+  useEffect(() => {
+    console.log("Use Effect has been executed");
+  }, [counterState]);
 
   return (
     <div className="h-screen flex justify-center items-center flex-col gap-2">
