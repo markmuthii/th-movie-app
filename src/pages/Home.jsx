@@ -8,7 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const isLoggedIn = false;
+    const isLoggedIn = true;
 
     if (!isLoggedIn) {
       console.log("Not logged in");
@@ -20,8 +20,6 @@ const Home = () => {
   return (
     <>
       <Hero />
-
-      <Link to="/movie">Go to Single Movie page</Link>
 
       <MovieList />
     </>
