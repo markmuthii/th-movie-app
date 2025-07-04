@@ -13,6 +13,7 @@ import cors from "cors";
 
 // Import the function to connect to the MongoDB database
 import { connectToDatabase } from "./database/config.js";
+import { Movie } from "./database/models/movie.js";
 
 // Call the function to connect to the database
 connectToDatabase();
@@ -28,10 +29,13 @@ app.use(
 );
 
 // Setup routes (root/home/index route)
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+  // Get all the movies that have been saved in the database
+  const movies = await Movie.find();
+
   res.json({
     success: true,
-    message: "Hello from the API!!!",
+    movies,
   });
 });
 
