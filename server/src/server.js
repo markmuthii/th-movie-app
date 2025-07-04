@@ -4,8 +4,18 @@
 
 // Import express
 import express from "express";
+
+// Import and configure dotenv so that the environment variables in the .env file can be loaded into the application
+import "dotenv/config";
+
 // Import cors
 import cors from "cors";
+
+// Import the function to connect to the MongoDB database
+import { connectToDatabase } from "./database/config.js";
+
+// Call the function to connect to the database
+connectToDatabase();
 
 // Instantiate express
 const app = express();
